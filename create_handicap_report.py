@@ -78,7 +78,7 @@ def get_player_records(session, params):
 
 
 def convert_index_to_course(index) -> int:
-    course_hcp = golf_round(float(index) * (float(SLOPE_INDEX)) / float(113))
+    course_hcp = golf_round(float(index) * (float(SLOPE_INDEX)) / float(113) + (float(COURSE_RATING) - float(PAR)))
     return -course_hcp if index[0] == '+' else course_hcp
 
 
